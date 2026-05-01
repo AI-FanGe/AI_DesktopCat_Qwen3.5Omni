@@ -434,12 +434,6 @@ DASHSCOPE_API_KEY=sk-your-api-key-here
 
 确认舵机 ID 是否和代码约定一致，串口 TX/RX 是否接反，供电电压是否符合舵机要求。第一次测试时不要让机构承受负载，先空载验证方向和角度范围。
 
-## 开源前注意
-
-- 不要提交 `.env`、真实 API Key、Wi-Fi 密码和本地私有素材。
-- 仓库里的 `sk-fake-placeholder`、`YOUR_WIFI_SSID`、`YOUR_WIFI_PASSWORD` 都是占位符。
-- 如果真实密钥曾经写进代码或推送到公开仓库，请去服务商控制台轮换密钥。
-- 大体积素材和生成文件建议放在 Release、网盘或说明文档里单独提供，不建议直接提交到 Git 历史。
 
 ## 后续可改造方向
 
