@@ -1,0 +1,5 @@
+# 马机器人腿部动作编排器依赖
+customtkinter>=5.2.0
+pyserial>=3.5  # 备选串口通信
+# urllib 是Python内置库，无需安装
+

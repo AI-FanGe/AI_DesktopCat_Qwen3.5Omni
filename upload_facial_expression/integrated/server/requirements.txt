@@ -1,0 +1,21 @@
+# Web框架
+fastapi>=0.109.0
+uvicorn[standard]>=0.27.0
+python-multipart>=0.0.6
+starlette>=0.35.0
+
+# 阿里云服务（AI对话、ASR）
+dashscope>=1.14.0
+python-dotenv>=1.0.0
+
+# OpenAI客户端（用于Omni模型）
+openai>=1.0.0
+
+# 音频处理
+# 注意：Python 3.9-3.12 自带 audioop 模块，无需安装 audioop-lts
+# Python 3.13+ 需要安装：pip install audioop-lts
+# audioop-lts>=0.2.1; python_version >= "3.13"
+
+# 网络通信
+websockets>=12.0
+aiohttp>=3.9.0

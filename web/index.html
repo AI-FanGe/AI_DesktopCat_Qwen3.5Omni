@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ESP32 组件测试台</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <main class="layout">
+    <section class="card">
+      <h1>ESP32 组件测试台</h1>
+      <div class="grid two">
+        <label>本机 IP<input id="localIp" value="192.168.2.7"></label>
+        <label>ESP32 IP<input id="esp32Ip" value="192.168.2.88"></label>
+        <label>控制端口<input id="controlPort" type="number" value="4210"></label>
+        <label>回传端口<input id="statusPort" type="number" value="4211"></label>
+      </div>
+      <div class="row">
+        <button id="connectBtn">连接设备</button>
+        <span id="statusText">未连接</span>
+      </div>
+    </section>
+
+    <section class="grid two">
+      <div class="card">
+        <h2>舵机</h2>
+        <div class="servo-group">
+          <label>舵机 1 <input id="servo1" type="range" min="0" max="180" value="90"><span id="servo1Value">90°</span></label>
+          <label>舵机 2 <input id="servo2" type="range" min="0" max="180" value="90"><span id="servo2Value">90°</span></label>
+          <label>舵机 3 <input id="servo3" type="range" min="0" max="180" value="90"><span id="servo3Value">90°</span></label>
+          <label>舵机 4 <input id="servo4" type="range" min="0" max="180" value="90"><span id="servo4Value">90°</span></label>
+        </div>
+        <div class="row">
+          <button id="centerBtn">一键回中位</button>
+          <button id="refreshServoBtn">读取舵机状态</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>扬声器</h2>
+        <label>频率 <input id="toneFreq" type="range" min="100" max="2000" value="440"><span id="toneFreqValue">440 Hz</span></label>
+        <label>音量 <input id="toneVolume" type="range" min="5" max="100" value="30"><span id="toneVolumeValue">30%</span></label>
+        <div class="row">
+          <button id="toneBtn">开始持续音</button>
+          <button id="beepBtn">测试蜂鸣 500ms</button>
+          <button id="stopToneBtn">停止声音</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>屏幕</h2>
+        <div class="row wrap">
+          <button data-screen-command="SCREEN INFO">显示信息页</button>
+          <button data-screen-command="SCREEN TEST">RGB 测试</button>
+          <button data-screen-command="SCREEN COLOR RED">红色</button>
+          <button data-screen-command="SCREEN COLOR GREEN">绿色</button>
+          <button data-screen-command="SCREEN COLOR BLUE">蓝色</button>
+          <button data-screen-command="SCREEN COLOR WHITE">白色</button>
+          <button data-screen-command="SCREEN COLOR BLACK">黑色</button>
+        </div>
+        <label>屏幕文字<input id="screenText" value="你好，屏幕测试"></label>
+        <div class="row">
+          <button id="sendScreenTextBtn">发送到屏幕</button>
+          <button id="screenChineseBtn">测试中文</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>摄像头</h2>
+        <div class="camera-meta">
+          <span id="cameraState">摄像头未连接</span>
+          <button id="snapshotBtn">截图保存</button>
+        </div>
+        <img id="cameraPreview" alt="camera preview">
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>设备日志</h2>
+      <pre id="logPanel"></pre>
+    </section>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>

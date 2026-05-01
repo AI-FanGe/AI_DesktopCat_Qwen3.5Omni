@@ -1,0 +1,36 @@
+# Python caches and environments
+__pycache__/
+*.py[cod]
+*$py.class
+.python-version
+.venv/
+venv/
+env/
+
+# Local secrets and machine-specific config
+.env
+.env.*
+*.local
+*.secret.*
+*.pem
+*.key
+
+# macOS and editor files
+.DS_Store
+.vscode/
+.idea/
+
+# Runtime outputs and logs
+snapshots/
+*.log
+
+# Large local/reference assets and generated firmware headers
+data/
+upload_facial_expression/flash_files/batch_*.h
+upload_facial_expression/mouth_flash_files/mouth_batch_*.h
+
+# Arduino/PlatformIO build outputs
+build/
+.pio/
+*.elf
+*.bin

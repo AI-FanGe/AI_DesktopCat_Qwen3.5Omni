@@ -1,0 +1,145 @@
+:root {
+  color-scheme: dark;
+  --bg: #0e1116;
+  --panel: #171c23;
+  --panel-alt: #1f2630;
+  --line: #2b3440;
+  --text: #e8eef7;
+  --muted: #9eafc5;
+  --accent: #4fd1c5;
+  --danger: #ff8a8a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: linear-gradient(180deg, #0c1015 0%, #131922 100%);
+  color: var(--text);
+}
+
+.layout {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.card {
+  background: rgba(23, 28, 35, 0.92);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.25);
+}
+
+.grid {
+  display: grid;
+  gap: 20px;
+}
+
+.two {
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 14px;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+h1, h2 {
+  margin: 0 0 16px;
+}
+
+label {
+  display: block;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+input[type="text"],
+input[type="number"],
+input:not([type]),
+button {
+  font: inherit;
+}
+
+input[type="text"],
+input[type="number"],
+input:not([type]) {
+  width: 100%;
+  margin-top: 6px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: var(--panel-alt);
+  color: var(--text);
+}
+
+input[type="range"] {
+  width: 100%;
+  margin: 8px 0;
+}
+
+button {
+  padding: 10px 14px;
+  border: 0;
+  border-radius: 10px;
+  background: var(--accent);
+  color: #032f2d;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover {
+  filter: brightness(1.05);
+}
+
+.servo-group label span,
+#toneFreqValue,
+#toneVolumeValue {
+  float: right;
+  color: var(--text);
+}
+
+#statusText {
+  color: var(--muted);
+}
+
+.camera-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+#cameraPreview {
+  width: 100%;
+  min-height: 240px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: #000;
+  object-fit: contain;
+}
+
+#logPanel {
+  margin: 0;
+  max-height: 280px;
+  overflow: auto;
+  padding: 14px;
+  border-radius: 12px;
+  background: #0b0f14;
+  color: #c7d6ea;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 13px;
+  line-height: 1.5;
+}

@@ -1,0 +1,38 @@
+# ESP32S3 8MB Flash 自定义分区表
+# 优化：给LittleFS分配更大空间（约4.5MB）
+#
+# 使用方法：
+# Arduino IDE -> 工具 -> Partition Scheme -> 选择 "Custom"
+# 或者将此文件放在sketch目录下，IDE会自动识别
+#
+# Name,     Type, SubType,  Offset,   Size,    Flags
+nvs,        data, nvs,      0x9000,   0x5000,
+otadata,    data, ota,      0xe000,   0x2000,
+app0,       app,  ota_0,    0x10000,  0x300000,
+spiffs,     data, spiffs,   0x310000, 0x4F0000,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
